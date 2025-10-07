@@ -1,0 +1,131 @@
+header {
+    width: 100%;
+    background-color: #d81e05;
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    max-height: 15vh; /* Aumentado a 15vh para dar más espacio */
+    min-height: 3rem; /* Mínimo para asegurar visibilidad */
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Lora', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3rem;
+    margin-top: 0.3rem;
+    align-items: center; /* Centrar verticalmente los elementos */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    white-space: nowrap; /* Evita que el texto se divida */
+}
+
+nav a:hover {
+    background-color: #b71c1c;
+    color: #fff3e0;
+    transform: scale(1.05);
+}
+
+footer {
+    width: 100%;
+    background-color: #d81e05;
+    color: white;
+    padding: 1rem;
+    margin-top: auto;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+}
+
+footer a {
+    color: #fff3e0;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffe082;
+}
+
+/* Back to top button */
+.back-to-top {
+    display: inline-block;
+    background-color: #d81e05;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #b71c1c;
+    transform: scale(1.05);
+}
+
+/* Show back-to-top button when scrolling */
+@media (min-height: 600px) {
+    body:hover .back-to-top {
+        opacity: 1;
+    }
+}
+
+/* Ajustes para móviles */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 0.5rem;
+        max-height: 20vh; /* Aumentado a 20vh para dar más flexibilidad */
+        min-height: 2.5rem; /* Mínimo ajustado */
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        flex-direction: column; /* Forzar columna en móviles */
+        gap: 0.2rem; /* Reducir aún más el espacio */
+        margin-top: 0.2rem;
+    }
+
+    nav a {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    footer {
+        padding: 0.75rem;
+    }
+
+    .back-to-top {
+        padding: 0.4rem 0.8rem;
+        bottom: 5px;
+        right: 5px;
+    }
+}

@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fafafa;
+    color: #2d2d2d;
+    line-height: 1.6;
+    position: relative;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+.fade-in {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
