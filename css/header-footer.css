@@ -7,8 +7,8 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    max-height: 15vh; /* Aumentado a 15vh para dar más espacio */
-    min-height: 3rem; /* Mínimo para asegurar visibilidad */
+    max-height: 15vh;
+    min-height: 3rem;
 }
 
 header h1 {
@@ -27,7 +27,7 @@ nav ul {
     justify-content: center;
     gap: 0.3rem;
     margin-top: 0.3rem;
-    align-items: center; /* Centrar verticalmente los elementos */
+    align-items: center;
 }
 
 nav a {
@@ -39,7 +39,7 @@ nav a {
     padding: 0.4rem 0.8rem;
     border-radius: 4px;
     transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
-    white-space: nowrap; /* Evita que el texto se divida */
+    white-space: nowrap;
 }
 
 nav a:hover {
@@ -67,7 +67,7 @@ footer a:hover {
     color: #ffe082;
 }
 
-/* Back to top button */
+/* Back to top boton */
 .back-to-top {
     display: inline-block;
     background-color: #d81e05;
@@ -89,7 +89,6 @@ footer a:hover {
     transform: scale(1.05);
 }
 
-/* Show back-to-top button when scrolling */
 @media (min-height: 600px) {
     body:hover .back-to-top {
         opacity: 1;
@@ -100,8 +99,8 @@ footer a:hover {
 @media screen and (max-width: 768px) {
     header {
         padding: 0.5rem;
-        max-height: 20vh; /* Aumentado a 20vh para dar más flexibilidad */
-        min-height: 2.5rem; /* Mínimo ajustado */
+        max-height: 20vh;
+        min-height: 2.5rem;
     }
 
     header h1 {
@@ -109,14 +108,19 @@ footer a:hover {
     }
 
     nav ul {
-        flex-direction: column; /* Forzar columna en móviles */
-        gap: 0.2rem; /* Reducir aún más el espacio */
+        flex-direction: row;
+        gap: 0.2rem;
         margin-top: 0.2rem;
+        justify-content: center;
+        overflow-x: auto;
+
     }
 
     nav a {
         font-size: 0.7rem;
         padding: 0.3rem 0.6rem;
+        min-width: 4rem;
+        text-align: center;
     }
 
     footer {
