@@ -259,10 +259,8 @@ details p, details ul, details ol {
 .intro-text {
     font-size: 1.2rem;
     color: #555;
-    margin: 1.5rem 0;
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1.5rem auto;
 }
 
 .intro-images {
